@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Mono");
+@import "constants";
+
+$font-courier: "Courier New", Courier, monospace;
+$font-ibm: "IBM Plex Mono", monospace;
+
+body {
+    font-family: $font-ibm;
+    font-size: $font-size;
+    color: #24292e;
+    background-color: #fff;
+}

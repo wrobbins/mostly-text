@@ -1,0 +1,46 @@
+---
+# required for jekyll
+---
+
+@import "typography";
+@import "posts";
+@import "constants";
+
+$footer-padding: 10px;
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;  
+}
+
+main {
+  width: 90%;
+  height: 90%;
+  padding: 10px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 40px 1fr 20px;  
+  @media screen and (max-width: $tablet-width) {
+    grid-template-rows: 80px 1fr 20px;  
+    width: 100%;
+    padding: 2px;
+  }
+}
+
+.header {
+  border-bottom: 1px solid gray;  
+  text-align: center;
+}
+
+footer {
+  padding-bottom: 10px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0;
+}
+
