@@ -6,16 +6,11 @@ layout: default
     <div class="posts">
         <!-- TODO: pagination -->
         {% for post in site.posts %}
-        <div class="post">
+        <div class="post" href="{{post.link}}">
             <div class="date post-item">[{{ post.date | date: "%m-%d-%Y" }}]</div>
             <div class="title post-item">{{ post.title }}</div>
-            <!-- {% if post.link %}                
-            <a href={{ post.link }} target="_blank" class="source post-item" title="source!">
-                source
-            </a>
-            {% endif %} -->
             <div class="exerpt post-item">{{ post.excerpt }}</div>
         </div>
         {% endfor %}
-    </div>    
+    </div>
 </div>

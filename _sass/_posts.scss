@@ -1,6 +1,8 @@
 @import "constants";
 
 $row-height: 25px;
+$alternate-color: rgb(238, 238, 238);
+$hover-color: rgb(190, 190, 190);
 
 .posts {
     display: flex;
@@ -20,8 +22,19 @@ $row-height: 25px;
     grid-template-columns: 100px 275px 1fr;
     padding: 0;
     margin: 1px 0;    
+    pointer-events: all;
+
+    &:hover {
+        background: $hover-color;
+        cursor: pointer;
+    }
+
     &:nth-child(even){
-      background: rgb(238, 238, 238);
+      background: $alternate-color;
+
+      &:hover{
+        background: $hover-color;
+      }
     }
     .post-item {
       text-align: left;
@@ -29,20 +42,12 @@ $row-height: 25px;
       p {    
         margin: 0;
       }    
-    }
-  
-    .date {
-    }
-  
-    .source {
+      pointer-events: none;
     }
     
     .title {
         margin-left: 3px;
-    }
-    
-    .exerpt {      
-    }
+    }    
 }
 
 @media screen and (max-width: $tablet-width) {
